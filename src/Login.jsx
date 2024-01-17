@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./style.css"
+import axios from 'axios';
 
 function Login() {
 
@@ -23,7 +24,7 @@ function Login() {
     e.preventDefault();
     console.log('Login Details', loginDetails);
 
-    axios.post('https://habitual-home-production.up.railway.app/auth/login-admin', loginDetails)
+    axios.post('http://localhost:7002/auth/login-admin', loginDetails)
       .then(response => {
         // Handle the response
         console.log(response.data);
