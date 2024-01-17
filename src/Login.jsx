@@ -28,9 +28,10 @@ function Login() {
           body: JSON.stringify(loginDetails)
         });
   
-        const data = await response.json();
-        localStorage.setItem('authToken', data['jwkToken']);
-        setToken(data.token);
+        // const data = await response.json();
+        // localStorage.setItem('authToken', data['jwkToken']);
+        // setToken(data.token);
+        console.log(response)
       } catch (error) {
         console.error('Authentication failed:', error);
       }
