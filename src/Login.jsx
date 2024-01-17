@@ -23,7 +23,7 @@ function Login() {
       e.preventDefault();
       console.log('Login Details', loginDetails);
       try {
-        const response = await fetch(' http://localhost:7002/auth/login-admin', {
+        const response = await fetch('https://habitual-home-production.up.railway.app/auth/login-admin', {
           method: 'POST',
           body: JSON.stringify(loginDetails)
         });
